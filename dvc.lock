@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/stages/data_ingestion.py
+    deps:
+    - path: data/raw/student_scores.csv
+      hash: md5
+      md5: b8ced3aea5f2462b7dabf2851b9f2be1
+      size: 83
+    - path: src/stages/data_ingestion.py
+      hash: md5
+      md5: 818b8a44fa310d4f82d6b7a16093a829
+      size: 1198
+    outs:
+    - path: data/processed/ingested_data.csv
+      hash: md5
+      md5: b48fcc412effe0ef34f634d6a66c438a
+      size: 93
+  data_validation:
+    cmd: python src/stages/data_validation.py
+    deps:
+    - path: data/processed/ingested_data.csv
+      hash: md5
+      md5: b48fcc412effe0ef34f634d6a66c438a
+      size: 93
+    - path: src/stages/data_validation.py
+      hash: md5
+      md5: 6d2845e3b7574b4fef7ec534b6996ab8
+      size: 1911
+    outs:
+    - path: data/processed/validation_report.csv
+      hash: md5
+      md5: b838c9ac3f8ba8934479462d1d0a1eed
+      size: 74
