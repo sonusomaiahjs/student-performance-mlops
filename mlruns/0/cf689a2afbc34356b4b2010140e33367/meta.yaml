@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/cf689a2afbc34356b4b2010140e33367/artifacts
+end_time: 1764255749251
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cf689a2afbc34356b4b2010140e33367
+run_name: useful-moth-265
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764255748955
+status: 3
+tags: []
+user_id: sonus

@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/fcc994717441495b836512461078c7a9/artifacts
+end_time: 1764290734400
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fcc994717441495b836512461078c7a9
+run_name: fearless-colt-586
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764290734155
+status: 3
+tags: []
+user_id: sonus

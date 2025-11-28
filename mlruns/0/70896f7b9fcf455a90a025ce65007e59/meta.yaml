@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/70896f7b9fcf455a90a025ce65007e59/artifacts
+end_time: 1764290081545
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 70896f7b9fcf455a90a025ce65007e59
+run_name: unleashed-doe-258
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764290081425
+status: 3
+tags: []
+user_id: sonus

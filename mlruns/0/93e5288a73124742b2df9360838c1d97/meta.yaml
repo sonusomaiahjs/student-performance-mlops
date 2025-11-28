@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/93e5288a73124742b2df9360838c1d97/artifacts
+end_time: 1764256582923
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 93e5288a73124742b2df9360838c1d97
+run_name: gaudy-pug-580
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764256582484
+status: 3
+tags: []
+user_id: sonus

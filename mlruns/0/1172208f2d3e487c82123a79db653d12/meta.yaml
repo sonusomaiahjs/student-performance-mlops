@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/1172208f2d3e487c82123a79db653d12/artifacts
+end_time: 1764291121546
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1172208f2d3e487c82123a79db653d12
+run_name: fortunate-gnu-667
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764291121357
+status: 3
+tags: []
+user_id: sonus

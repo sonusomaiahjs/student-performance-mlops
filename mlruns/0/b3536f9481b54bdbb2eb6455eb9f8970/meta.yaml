@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/b3536f9481b54bdbb2eb6455eb9f8970/artifacts
+end_time: 1764256430247
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b3536f9481b54bdbb2eb6455eb9f8970
+run_name: gifted-eel-168
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764256430087
+status: 3
+tags: []
+user_id: sonus

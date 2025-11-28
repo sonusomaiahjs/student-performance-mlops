@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/abf1b6075a864ce98e48eec3af6babeb/artifacts
+end_time: 1764289890896
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: abf1b6075a864ce98e48eec3af6babeb
+run_name: nosy-shark-145
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764289890704
+status: 3
+tags: []
+user_id: sonus

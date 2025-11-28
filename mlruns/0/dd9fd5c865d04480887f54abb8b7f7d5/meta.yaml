@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/dd9fd5c865d04480887f54abb8b7f7d5/artifacts
+end_time: 1764290380002
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dd9fd5c865d04480887f54abb8b7f7d5
+run_name: indecisive-lamb-96
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764290379875
+status: 3
+tags: []
+user_id: sonus

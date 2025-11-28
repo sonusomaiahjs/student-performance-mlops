@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/0/e2fcf2129cdd469ab4b4906c576df6f1/artifacts
+end_time: 1764290843078
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e2fcf2129cdd469ab4b4906c576df6f1
+run_name: skittish-eel-973
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764290842964
+status: 3
+tags: []
+user_id: sonus
