@@ -28,7 +28,39 @@ stages:
       md5: 6d2845e3b7574b4fef7ec534b6996ab8
       size: 1911
     outs:
+    - path: data/processed/validated_data.csv
+      hash: md5
+      md5: b48fcc412effe0ef34f634d6a66c438a
+      size: 93
     - path: data/processed/validation_report.csv
       hash: md5
       md5: b838c9ac3f8ba8934479462d1d0a1eed
       size: 74
+  data_preprocessing:
+    cmd: python src/stages/data_preprocessing.py
+    deps:
+    - path: data/processed/validated_data.csv
+      hash: md5
+      md5: b48fcc412effe0ef34f634d6a66c438a
+      size: 93
+    - path: src/stages/data_preprocessing.py
+      hash: md5
+      md5: 5a6070afa06b5970f8b2493570b8fe19
+      size: 2312
+    outs:
+    - path: data/processed/X_test.csv
+      hash: md5
+      md5: 6b5c26fa249a07e48372d34710cf69f6
+      size: 17
+    - path: data/processed/X_train.csv
+      hash: md5
+      md5: 8ac31a9e530e78c2056aa59b90dcfab7
+      size: 47
+    - path: data/processed/y_test.csv
+      hash: md5
+      md5: fcc5cddb578779d0749bbb6c24d9483f
+      size: 15
+    - path: data/processed/y_train.csv
+      hash: md5
+      md5: 3efb316dc04fbf1d519d5ee4e5dc8477
+      size: 39
