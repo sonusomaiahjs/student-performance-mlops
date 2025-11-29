@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/sonus/OneDrive/Desktop/student-performance-mlops/mlruns/905306253407357432/86601182aecc4e0e896d0962f894016c/artifacts
+end_time: 1764311030262
+entry_point_name: ''
+experiment_id: '905306253407357432'
+lifecycle_stage: active
+run_id: 86601182aecc4e0e896d0962f894016c
+run_name: data_validation
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764311030205
+status: 3
+tags: []
+user_id: sonus

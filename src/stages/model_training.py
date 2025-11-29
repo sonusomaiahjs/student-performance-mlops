@@ -1,48 +1,55 @@
 import os
 import pandas as pd
-import joblib
+import mlflow
+import pickle
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
-import mlflow
+
 
 class ModelTraining:
     def __init__(self, processed_dir="data/processed", model_dir="models"):
         self.processed_dir = processed_dir
         self.model_dir = model_dir
         os.makedirs(self.model_dir, exist_ok=True)
-        self.model_path = os.path.join(self.model_dir, "linear_regression_model.pkl")
 
-    def train_model(self):
-        # Load processed data
+    def train(self):
+        print("📥 Loading training data...")
+
         X_train = pd.read_csv(os.path.join(self.processed_dir, "X_train.csv"))
         y_train = pd.read_csv(os.path.join(self.processed_dir, "y_train.csv"))
-        X_test = pd.read_csv(os.path.join(self.processed_dir, "X_test.csv"))
-        y_test = pd.read_csv(os.path.join(self.processed_dir, "y_test.csv"))
 
-        # Train model
-        model = LinearRegression()
-        model.fit(X_train, y_train)
+        # Convert y_train to Series (important)
+        y_train = y_train.squeeze()
 
-        # Predictions
-        y_pred = model.predict(X_test)
+        mlflow.set_experiment("student_performance")
 
-        # Metrics
-        mse = mean_squared_error(y_test, y_pred)
-        r2 = r2_score(y_test, y_pred)
+        with mlflow.start_run():
+            mlflow.log_param("model_type", "LinearRegression")
 
-        print("✅ Model Training Completed!")
-        print(f"MSE: {mse:.2f}, R2 Score: {r2:.2f}")
+            model = LinearRegression()
+            model.fit(X_train, y_train)
 
-        # Save model
-        joblib.dump(model, self.model_path)
-        print(f"💾 Model saved at: {self.model_path}")
+            # Predictions for metrics
+            preds = model.predict(X_train)
 
-        # MLflow logs
-        mlflow.log_metric("MSE", mse)
-        mlflow.log_metric("R2_Score", r2)
+            mse = mean_squared_error(y_train, preds)
+            r2 = r2_score(y_train, preds)
 
-        return model
+            mlflow.log_metric("train_mse", mse)
+            mlflow.log_metric("train_r2", r2)
+
+            print(f"📊 Training MSE: {mse}")
+            print(f"📈 Training R²: {r2}")
+
+            # Save model locally
+            model_path = os.path.join(self.model_dir, "model.pkl")
+            with open(model_path, "wb") as f:
+                pickle.dump(model, f)
+
+            mlflow.log_artifact(model_path)
+            print(f"✅ Model saved at: {model_path}")
+
 
 if __name__ == "__main__":
     trainer = ModelTraining()
-    trainer.train_model()
+    trainer.train()
